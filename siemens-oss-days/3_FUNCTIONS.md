@@ -3,7 +3,9 @@
 ## Create a function
 
 ```bash
+rm -rf siemens-function
 func create -l go siemens-function
+export FUNC_PATH=/Users/rlehmann/code/retocode/demos/siemens-oss-days/siemens-function
 ```
 
 ```text
@@ -27,7 +29,6 @@ siemens-function
 
 ## Building the function
 ```bash
-cd siemens-function
 func build
 ```
 ```text
@@ -36,7 +37,6 @@ func build
 
 ## Running and invoking the function
 ```bash
-cd siemens-function
 func run --build=false
 ```
 
@@ -58,14 +58,10 @@ Body:
 ## Deploying and invoking the function
 
 ```bash
-watch -n 1 kubectl get ksvc -n default
-```
-```bash
 watch -n 1 kubectl get pod -n default
 ```
 
 ```bash
-cd siemens-function
 func deploy
 ```
 
@@ -76,8 +72,7 @@ http://siemens-function.default.10.89.0.200.sslip.io
 ```
 
 ```bash
-cd siemens-function
-func invoke
+func invoke --target=remote
 ```
 
 ```text
@@ -100,11 +95,11 @@ Body:
 > 📝 Change something in ./siemens-function/handle.go
 
 ```bash
-cd siemens-function
 func deploy
 ```
+
+We can also use `curl`
 ```bash
-# We can also use curl
 curl -X POST http://siemens-function.default.10.89.0.200.sslip.io
 ```
 

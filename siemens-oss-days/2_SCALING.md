@@ -36,7 +36,7 @@ spec:
         - image: ghcr.io/knative/helloworld-go:latest
           env:
             - name: TARGET
-              value: "Hello Siemens folks 👋"        
+              value: "Siemens folks 👋"        
 EOF
 ```
 

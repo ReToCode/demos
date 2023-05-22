@@ -1,4 +1,4 @@
-# Knative Demos
+# Reto's Demos
 
 ## Prerequisites
 
@@ -16,8 +16,7 @@ export FUNC_REGISTRY=quay.io/rlehmann
 **Cluster**
 
 * A Kubernetes cluster
-* Knative Serving with Kourier installed
-* Knative Eventing installed
+* Knative Serving with Kourier and Knative Eventing installed [script](https://github.com/ReToCode/local-kind-setup)
 
 ## Demos
 
