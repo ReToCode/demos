@@ -68,11 +68,11 @@ func deploy
 ```text
 ⬆️  Deploying function to the cluster
 ✅ Function updated in namespace "default" and exposed at URL: 
-http://siemens-function.default.10.89.0.200.sslip.io
+https://siemens-function-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com
 ```
 
 ```bash
-func invoke --target=remote
+func invoke --target=remote -i
 ```
 
 ```text
@@ -100,18 +100,20 @@ func deploy
 
 We can also use `curl`
 ```bash
-curl -X POST http://siemens-function.default.10.89.0.200.sslip.io
+curl -X POST -k https://siemens-function-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com
 ```
 
 ```text
-POST / HTTP/1.1 siemens-function.default.10.89.0.200.sslip.io
+POST / HTTP/1.1 siemens-function-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com
+  X-Forwarded-Port: 443
   User-Agent: curl/7.87.0
+  Content-Length: 0
   Accept: */*
   K-Proxy-Request: activator
-  X-Forwarded-Proto: http
-  X-Request-Id: 044636c7-9b44-411f-8e84-a4d42cfc8bd9
-  Content-Length: 0
-  Forwarded: for=10.244.3.4;proto=http
-  X-Forwarded-For: 10.244.3.4, 10.244.3.3
+  Forwarded: for=178.238.166.111;host=siemens-function-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com;proto=https
+  X-Forwarded-For: 178.238.166.111, 10.129.2.18, 10.131.0.19
+  X-Forwarded-Host: siemens-function-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com
+  X-Forwarded-Proto: https
+  X-Request-Id: 05bbf19d-d4c8-48ee-9928-b8c801040b21
 Hello Siemens Folks 🙋‍♂
 ```

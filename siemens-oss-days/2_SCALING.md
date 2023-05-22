@@ -5,10 +5,10 @@
 > 📝 Knative provides a lot of default values. For the demo we make them a bit more snappy
 
 ```bash
-kubectl patch cm config-autoscaler -n knative-serving -p '{"data": {"stable-window": "10s"}}'
-kubectl patch cm config-autoscaler -n knative-serving -p '{"data": {"allow-zero-initial-scale": "true"}}'
-kubectl patch cm config-autoscaler -n knative-serving -p '{"data": {"scale-to-zero-grace-period": "1s"}}'
-kubectl patch cm config-autoscaler -n knative-serving -p '{"data": {"container-concurrency-target-percentage": "0.7"}}'
+oc -n knative-serving patch knativeserving/knative-serving --type=merge --patch='{"spec": {"config": { "autoscaler": {"stable-window": "10s"}}}}'
+oc -n knative-serving patch knativeserving/knative-serving --type=merge --patch='{"spec": {"config": { "autoscaler": {"allow-zero-initial-scale": "true"}}}}'
+oc -n knative-serving patch knativeserving/knative-serving --type=merge --patch='{"spec": {"config": { "autoscaler": {"scale-to-zero-grace-period": "1s"}}}}'
+oc -n knative-serving patch knativeserving/knative-serving --type=merge --patch='{"spec": {"config": { "autoscaler": {"container-concurrency-target-percentage": "0.7"}}}}'
 ```
 
 ## Watching pods and Knative internals
@@ -41,7 +41,7 @@ EOF
 ```
 
 ```bash
-curl http://scale-to-zero.default.10.89.0.200.sslip.io
+curl -k https://scale-to-zero-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com/
 ```
 
 ## Scale from zero
@@ -88,7 +88,7 @@ EOF
 ```
 
 ```bash
-curl http://scale-from-zero.default.10.89.0.200.sslip.io
+curl -k https://scale-from-zero-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com/
 ```
 
 ## Scaling based on targets
@@ -121,24 +121,24 @@ EOF
 ### 🙋‍♂️🙋‍♀ How many pods are we going to see?️
 
 ```bash
-curl http://scale-target.default.10.89.0.200.sslip.io
+curl -k https://scale-target-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com/
 ```
 
 ```bash
-kubectl patch cm config-autoscaler -n knative-serving -p '{"data": {"container-concurrency-target-percentage": "1"}}'
+oc -n knative-serving patch knativeserving/knative-serving --type=merge --patch='{"spec": {"config": { "autoscaler": {"container-concurrency-target-percentage": "1"}}}}'
 ```
 
 ### 🙋‍♂️🙋‍♀ And now?
 
 ```bash
-curl http://scale-target.default.10.89.0.200.sslip.io
+curl -k https://scale-target-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com/
 ```
 
 ### 🙋‍♂️🙋‍♀ And now?
 
 ```bash
 # Send 20 concurrent requests for 60 seconds
-hey -z 60s -c 20 http://scale-target.default.10.89.0.200.sslip.io
+hey -z 60s -c 20 https://scale-target-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com/
 ```
 
 
