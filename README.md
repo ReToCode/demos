@@ -20,7 +20,7 @@ export FUNC_REGISTRY=quay.io/rlehmann
 
 ## Demos
 
-| Title                                           | Event                      | Date         | Code                                   | Recording | 
+| Title                                           | Event                      | Date         | Code & Slides                          | Recording | 
 |-------------------------------------------------|----------------------------|--------------|----------------------------------------|-----------|
 | 	Knative - A story about Serverless Development | Open Source @ Siemens 2023 | May 23, 2023 | [siemens-oss-days](./siemens-oss-days) | tbd       |  
 
