@@ -1,0 +1,7 @@
+builds:
+  - id: oger
+    dir: oger
+    main: main.go
+  - id: horse
+    dir: horse-jaskier
+    main: main.go
