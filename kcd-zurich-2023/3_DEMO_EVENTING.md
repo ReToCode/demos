@@ -74,6 +74,15 @@ spec:
 EOF
 ```
 
+```bash
+kubectl get triggers -n default
+```
+
+```text
+NAME                  BROKER    SUBSCRIBER_URI                                               AGE     READY   REASON
+jaskier-door-events   default   http://horse-jaskier.default.svc.cluster.local/cloudevents   26s     True    
+```
+
 # 4. Testing it
 
 We can use the already deployed `horse-jaskier` service. Make sure that you specify the `BROKER_URL` environment variable:
@@ -96,7 +105,7 @@ spec:
 EOF
 ```
 
-Then use the UI on `http://<your-domain>/kafka.html` or send it directly using 
+Then use the UI on [http://<your-domain>/kafka.html](http://horse-jaskier.default.10.89.0.200.sslip.io/kafka.html) or send it directly using
 
 ```bash
 curl -iv http://horse-jaskier.default.10.89.0.200.sslip.io/knock-on-door
