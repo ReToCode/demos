@@ -320,5 +320,5 @@ kubectl get -n default ksvc
 
 ```text
 NAME            URL                                                 LATESTCREATED         LATESTREADY           READY   REASON
-horse-jaskier   http://horse-jaskier.default.10.89.0.200.sslip.io   horse-jaskier-00001   horse-jaskier-00001   True
+horse-jaskier   https://horse-jaskier-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com   horse-jaskier-00001   horse-jaskier-00001   True
 ```

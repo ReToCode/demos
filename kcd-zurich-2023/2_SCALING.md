@@ -14,7 +14,7 @@ watch -n 1 kubectl get podautoscaler -n default
 We already have that with the deployed Service.
 
 ```bash
-curl http://horse-jaskier.default.10.89.0.200.sslip.io
+curl -k https://horse-jaskier-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com
 ```
 
 ## Scale from zero
@@ -40,7 +40,7 @@ EOF
 ```
 
 ```bash
-curl http://horse-jaskier.default.10.89.0.200.sslip.io
+curl -k https://horse-jaskier-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com
 ```
 
 ## How does this work

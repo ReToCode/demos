@@ -105,8 +105,8 @@ spec:
 EOF
 ```
 
-Then use the UI on [http://<your-domain>/kafka.html](http://horse-jaskier.default.10.89.0.200.sslip.io/kafka.html) or send it directly using
+Then use the UI on [http://<your-domain>/kafka.html](https://horse-jaskier-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com/kafka.html) or send it directly using
 
 ```bash
-curl -iv http://horse-jaskier.default.10.89.0.200.sslip.io/knock-on-door
+curl -ivk https://horse-jaskier-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com/knock-on-door
 ```

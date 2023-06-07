@@ -22,10 +22,10 @@ You need:
 > 📝 Knative provides a lot of default values. For the demo we make them a bit more snappy
 
 ```bash
-kubectl patch cm config-autoscaler -n knative-serving -p '{"data": {"stable-window": "10s"}}'
-kubectl patch cm config-autoscaler -n knative-serving -p '{"data": {"allow-zero-initial-scale": "true"}}'
-kubectl patch cm config-autoscaler -n knative-serving -p '{"data": {"scale-to-zero-grace-period": "1s"}}'
-kubectl patch cm config-autoscaler -n knative-serving -p '{"data": {"container-concurrency-target-percentage": "0.7"}}'
+oc -n knative-serving patch knativeserving/knative-serving --type=merge --patch='{"spec": {"config": { "autoscaler": {"stable-window": "10s"}}}}'
+oc -n knative-serving patch knativeserving/knative-serving --type=merge --patch='{"spec": {"config": { "autoscaler": {"allow-zero-initial-scale": "true"}}}}'
+oc -n knative-serving patch knativeserving/knative-serving --type=merge --patch='{"spec": {"config": { "autoscaler": {"scale-to-zero-grace-period": "1s"}}}}'
+oc -n knative-serving patch knativeserving/knative-serving --type=merge --patch='{"spec": {"config": { "autoscaler": {"container-concurrency-target-percentage": "0.7"}}}}'
 ```
 
 ### Create the demo resources
