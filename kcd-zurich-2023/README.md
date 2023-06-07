@@ -1,6 +1,6 @@
 # KCD Zurich 2023
 
-* [Slides](./slides.pdf)
+* Slides - will be available after the event.
 
 
 ## Setup
@@ -8,8 +8,8 @@
 You need:
 * [Ko](https://github.com/ko-build/ko) installed and registry configured
 * A Kubernetes cluster
-* Knative Serving with Kourier installed [script](https://github.com/ReToCode/local-kind-setup)
-* Knative Eventing installed [script](https://github.com/ReToCode/local-kind-setup)
+* Knative Serving with Kourier installed [script](https://github.com/ReToCode/local-kind-setup/blob/main/install_serving_kourier.sh)
+* Knative Eventing installed [script](https://github.com/ReToCode/local-kind-setup/blob/main/install_eventing_kafka.sh)
 
 ```bash
 ./create_cluster.sh
