@@ -1,4 +1,4 @@
-# Knative Autoscaling
+# Passing the bridge
 
 ## Watching pods and Knative internals
 
@@ -48,3 +48,11 @@ curl http://horse-jaskier.default.10.89.0.200.sslip.io
 ![Serving Architecture](./images/serving-architecture.png)
 
 
+## More Knative Serving Features
+
+* A/B-, Canary-Deployments, Gradual rollouts
+* Tag based routing
+* Configuration and Revisions
+* Metrics and Observability
+
+For more please refer to the [documentation](https://knative.dev).

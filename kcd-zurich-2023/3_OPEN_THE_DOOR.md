@@ -1,9 +1,11 @@
-# Big picture
+# Open the door
+
+## Big picture
 
 ![Eventing Architecture](./images/eventing-architecture.png)
 
 
-# Update the application to speak CloudEvents
+## Update the application to speak CloudEvents
 
 ![CloudEvents](./images/cloudevents.png)
 
@@ -49,7 +51,7 @@ func receiveCloudEvent(w http.ResponseWriter, r *http.Request) {
 More details on [full source](./horse-jaskier/main.go).
 
 
-# 3. Receive traffic from Kafka
+## 3. Receive traffic from Kafka
 
 To receive traffic from Knative Eventing Kafka Broker, we create a `Trigger` to get events to our Knative Service `horse-jaskier`:
 
@@ -83,7 +85,7 @@ NAME                  BROKER    SUBSCRIBER_URI                                  
 jaskier-door-events   default   http://horse-jaskier.default.svc.cluster.local/cloudevents   26s     True    
 ```
 
-# 4. Testing it
+## 4. Open the door
 
 We can use the already deployed `horse-jaskier` service. Make sure that you specify the `BROKER_URL` environment variable:
 
@@ -110,3 +112,15 @@ Then use the UI on [http://horse-jaskier.default.10.89.0.200.sslip.io/kafka.html
 ```bash
 curl -iv http://horse-jaskier.default.10.89.0.200.sslip.io/knock-on-door
 ```
+
+## More Knative Eventing Features
+
+* [Cloud Events](https://cloudevents.io/)
+* Event Mesh
+* Brokers and triggers
+* Event sources
+* Event sinks
+* Controlling event delivery
+* Metrics and Observability
+
+For more please refer to the [documentation](https://knative.dev).

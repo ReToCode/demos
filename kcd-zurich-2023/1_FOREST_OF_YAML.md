@@ -1,4 +1,6 @@
-# A simple Knative Service
+# Crossing the forest of YAML
+
+A simple Knative Service
 
 ```bash
 kubectl apply -f - <<EOF

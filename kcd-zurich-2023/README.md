@@ -46,6 +46,6 @@ KO_DOCKER_REPO=quay.io/rlehmann ko build --platform=linux/arm64,linux/amd64 --sb
 ## Demos
 
 * Slides - will be available after the event
-* [Resources](./1_KNATIVE_RESOURCES.md)
-* [Scaling](./2_SCALING.md)
-* [Eventing](./3_DEMO_EVENTING.md)
+* [Forest of YAML](./1_FOREST_OF_YAML.md)
+* [Passing the bridge](./2_PASSING_THE_BRIDGE.md)
+* [Open the Door](./3_OPEN_THE_DOOR.md)
