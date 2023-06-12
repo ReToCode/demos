@@ -107,6 +107,15 @@ spec:
 EOF
 ```
 
+Getting logs:
+
+```bash
+kubectl logs -f -n default deploy/horse-jaskier-00003-deployment
+```
+```bash
+kubectl logs -f -n oger deploy/oger
+```
+
 Then use the UI on [http://horse-jaskier.default.10.89.0.200.sslip.io/kafka.html](http://horse-jaskier.default.10.89.0.200.sslip.io/kafka.html) or send it directly using
 
 ```bash
