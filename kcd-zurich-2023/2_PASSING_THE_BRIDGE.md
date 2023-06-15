@@ -50,6 +50,8 @@ curl http://horse-jaskier.default.10.89.0.200.sslip.io
 
 ## More Knative Serving Features
 
+* Request buffering to avoid application overload
+* Various traffic (scaling) targets like fixed max request rate
 * A/B-, Canary-Deployments, Gradual rollouts
 * Tag based routing
 * Configuration and Revisions
