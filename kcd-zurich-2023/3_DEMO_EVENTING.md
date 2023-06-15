@@ -105,8 +105,29 @@ spec:
 EOF
 ```
 
+Getting logs:
+
+```bash
+kubectl logs -f -n default deploy/horse-jaskier-00003-deployment
+```
+```bash
+kubectl logs -f -n oger deploy/oger
+```
+
 Then use the UI on [http://<your-domain>/kafka.html](https://horse-jaskier-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com/kafka.html) or send it directly using
 
 ```bash
 curl -ivk https://horse-jaskier-default.apps.rlehmann-ocp-4-12.serverless.devcluster.openshift.com/knock-on-door
 ```
+
+## More Knative Eventing Features
+
+* [Cloud Events](https://cloudevents.io/)
+* Event Mesh
+* Brokers and triggers
+* Event sources
+* Event sinks
+* Controlling event delivery
+* Metrics and Observability
+
+For more please refer to the [documentation](https://knative.dev).

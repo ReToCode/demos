@@ -48,3 +48,11 @@ curl -k https://horse-jaskier-default.apps.rlehmann-ocp-4-12.serverless.devclust
 ![Serving Architecture](./images/serving-architecture.png)
 
 
+## More Knative Serving Features
+
+* A/B-, Canary-Deployments, Gradual rollouts
+* Tag based routing
+* Configuration and Revisions
+* Metrics and Observability
+
+For more please refer to the [documentation](https://knative.dev).

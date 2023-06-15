@@ -1,8 +1,5 @@
 # KCD Zurich 2023
 
-* Slides - will be available after the event.
-
-
 ## Setup
 
 You need:
@@ -44,3 +41,11 @@ kubectl apply -f oger/oger.yaml
 KO_DOCKER_REPO=quay.io/rlehmann ko build --platform=linux/arm64,linux/amd64 --sbom=none -B oger
 KO_DOCKER_REPO=quay.io/rlehmann ko build --platform=linux/arm64,linux/amd64 --sbom=none -B horse-jaskier
 ```
+
+
+## Demos
+
+* Slides - will be available after the event
+* [Resources](./1_KNATIVE_RESOURCES.md)
+* [Scaling](./2_SCALING.md)
+* [Eventing](./3_DEMO_EVENTING.md)
